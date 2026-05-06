@@ -7,7 +7,8 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 
-public class RequestSimulator {
+public class RequestSimulator 
+{
 
     public List<String> simulateRequests(int requestCount, long delayMillis)
             throws InterruptedException, ExecutionException {

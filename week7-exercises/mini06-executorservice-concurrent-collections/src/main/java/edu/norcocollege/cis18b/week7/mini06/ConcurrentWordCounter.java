@@ -13,7 +13,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class ConcurrentWordCounter {
+public class ConcurrentWordCounter 
+{
 
     public CountSummary countWords(List<List<String>> batches) throws InterruptedException, ExecutionException {
         ExecutorService executor = Executors.newFixedThreadPool(Math.max(1, Math.min(4, batches.size())));

@@ -2,7 +2,8 @@ package edu.norcocollege.cis18b.week7.mini05;
 
 import java.util.List;
 
-public class GuardedBufferDemo {
+public class GuardedBufferDemo 
+{
 
     public static void main(String[] args) throws InterruptedException {
         OneSlotMessageBuffer buffer = new OneSlotMessageBuffer();

@@ -6,7 +6,8 @@ import java.util.Set;
 import java.util.concurrent.TimeoutException;
 import java.util.function.Supplier;
 
-public class BoundedObjectPool<T> {
+public class BoundedObjectPool<T> 
+{
     private final int capacity;
     private final Supplier<T> factory;
     private final ArrayDeque<T> available = new ArrayDeque<>();

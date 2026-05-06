@@ -1,6 +1,7 @@
 package edu.norcocollege.cis18b.week7.mini04;
 
-public class LivenessScenario {
+public class LivenessScenario 
+{
 	private final String name;
 	private final LivenessIssue issue;
 	private final String symptom;

@@ -5,7 +5,8 @@ import java.lang.reflect.Method;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public final class VirtualThreadSupport {
+public final class VirtualThreadSupport 
+{
     private static final String ERROR_MESSAGE = "Virtual threads require Java 21 or newer.";
 
     private VirtualThreadSupport() {

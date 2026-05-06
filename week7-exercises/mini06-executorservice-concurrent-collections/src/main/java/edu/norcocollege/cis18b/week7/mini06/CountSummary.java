@@ -2,7 +2,8 @@ package edu.norcocollege.cis18b.week7.mini06;
 
 import java.util.Map;
 
-public class CountSummary {
+public class CountSummary 
+{
 	private final int processedTokens;
 	private final Map<String, Integer> counts;
 

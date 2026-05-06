@@ -2,7 +2,8 @@ package edu.norcocollege.cis18b.week7.mini08;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class BoundedObjectPoolDemo {
+public class BoundedObjectPoolDemo 
+{
 
     public static void main(String[] args) throws Exception {
         AtomicInteger sequence = new AtomicInteger(1);

@@ -2,7 +2,8 @@ package edu.norcocollege.cis18b.week7.mini06;
 
 import java.util.List;
 
-public class ExecutorAggregationDemo {
+public class ExecutorAggregationDemo 
+{
 
     public static void main(String[] args) throws Exception {
         ConcurrentWordCounter counter = new ConcurrentWordCounter();

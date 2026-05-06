@@ -1,6 +1,7 @@
 package edu.norcocollege.cis18b.week7.mini05;
 
-public class OneSlotMessageBuffer {
+public class OneSlotMessageBuffer 
+{
     private String message;
     private boolean empty = true;
 
