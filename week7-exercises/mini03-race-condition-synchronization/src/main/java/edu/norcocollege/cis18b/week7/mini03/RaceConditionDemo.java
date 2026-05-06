@@ -11,6 +11,7 @@ public class RaceConditionDemo {
         int safe = RaceConditionHarness.runSynchronizedTrial(threadCount, incrementsPerThread);
         int atomic = RaceConditionHarness.runAtomicTrial(threadCount, incrementsPerThread);
 
+        System.out.println("Demonstrating race condition vs synchronized vs atomic counters...");
         System.out.println("Expected count: " + expected);
         System.out.println("Unsafe count: " + unsafe);
         System.out.println("Synchronized count: " + safe);

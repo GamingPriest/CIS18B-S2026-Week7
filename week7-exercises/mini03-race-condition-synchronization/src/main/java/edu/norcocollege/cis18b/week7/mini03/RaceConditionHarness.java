@@ -41,6 +41,7 @@ public final class RaceConditionHarness {
                     }
                 } catch (InterruptedException ex) {
                     Thread.currentThread().interrupt();
+                    return;
                 } finally {
                     done.countDown();
                 }
