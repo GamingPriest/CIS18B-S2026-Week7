@@ -3,14 +3,21 @@ package edu.norcocollege.cis18b.week7.mini02;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
-public class WorkerTask implements Runnable {
+public class WorkerTask implements Runnable 
+{
+
     private final String workerName;
     private final int steps;
     private final long delayMillis;
     private final CountDownLatch startGate;
     private final List<String> completionLog;
 
-    public WorkerTask(String workerName, int steps, long delayMillis, CountDownLatch startGate, List<String> completionLog) {
+    public WorkerTask(String workerName,
+                      int steps,
+                      long delayMillis,
+                      CountDownLatch startGate,
+                      List<String> completionLog) 
+    {
         this.workerName = workerName;
         this.steps = steps;
         this.delayMillis = delayMillis;
@@ -19,18 +26,37 @@ public class WorkerTask implements Runnable {
     }
 
     @Override
-    public void run() {
-        try {
+    public void run() 
+    {
+        try 
+        {
+
             startGate.await();
-            for (int step = 1; step <= steps; step++) {
+
+            for (int step = 1; step <= steps; step++) 
+            {
+
+                if (Thread.currentThread().isInterrupted()) 
+                {
+                    throw new InterruptedException();
+                }
+
+                System.out.println(workerName + " executing step " + step);
+
                 Thread.sleep(delayMillis);
             }
-            synchronized (completionLog) {
+
+            synchronized (completionLog) 
+            {
                 completionLog.add(workerName + " finished " + steps + " steps");
             }
-        } catch (InterruptedException ex) {
+
+        } catch (InterruptedException ex) 
+        {
             Thread.currentThread().interrupt();
-            synchronized (completionLog) {
+
+            synchronized (completionLog) 
+            {
                 completionLog.add(workerName + " interrupted");
             }
         }
